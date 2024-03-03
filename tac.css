@@ -6,58 +6,38 @@ body{
     justify-content: center;
     padding-top: 5%;
 }
-.container{
+.parentcontainer{
     width: 30vw;
     height: 70vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+.container{
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
     /* background-color: #F8F8FF; */
-    /* flex-wrap: wrap;
-    row-gap: 0px;
-    column-gap: 0px; */
-}
-
-
-/* .cell1{
-    border-right: 2px solid #000000;
-    border-bottom: 2px solid #000000;
-}
-.cell2{
-    border-left: 2px solid #000000;
-    border-right: 2px solid #000000;
-    border-bottom: 2px solid #000000;
-}
-.cell3{
-    border-left: 2px solid #000000;
-    border-bottom: 2px solid #000000;
-}
-.cell4{
-    border-top: 2px solid #000000;
-    border-right: 2px solid #000000;
-    border-bottom: 2px solid #000000;  
-}
-.cell5{
-    border-top: 2px solid #000000;
-    border-right: 2px solid #000000;
-    border-bottom: 2px solid #000000;  
-    border-left: 2px solid #000000;
-}
-.cell6{
-    border-left: 2px solid #000000;
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000;
-}
-.cell7{
+    flex-wrap: wrap;
+    gap: 10px;
     
-} */
+}
 
 
 button{
     width: 100px;
     height: 100px;
     border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    margin: 3px;
+    font-size: 70px;
+}
+button:hover{
+    background-color: #e5e4e4;
+
 }
