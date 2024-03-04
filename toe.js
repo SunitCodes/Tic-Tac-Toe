@@ -13,19 +13,28 @@ const WinPattern = [
     [2,4,6]
 ];
 
+let btncount = 0;
+
 btn.forEach( (button) => {
     button.addEventListener("click", ()=> {
         if(turn1 === true){
             button.innerText = "X" ;
+            button.style.color="#ff3333";
             turn1 = false;
         }
         else{
             button.innerText = "O" ;
             turn1 = true;
+            button.style.color="#3399ff";
         }
         button.disabled = true; //once player makes a choice he cannot change
 
-        checkWinner();
+        const check = checkWinner();
+        
+        btncount++;
+
+        if(btncount == 9 && check != 1 )
+            alert("Match DRAWN Try Again");
     })
 })
 
@@ -42,8 +51,11 @@ function checkWinner(){
             
             if(ele1 === ele2 && ele2 === ele3){
                 console.log("Winner");
+                alert(`Congratulations ${ele1} WON`);
 
                 stopGame(); // once we get a winner the game stops
+                
+                return 1;
             }
             
         }
